@@ -23,16 +23,16 @@ const useStyles = makeStyles({
   navDisplayFlex: {
     display: "flex",
     justifyContent: "space-between",
-    color: "purple",
+    color: "#66003b",
   },
   linkText: {
     textDecoration: "none",
     textTransform: "uppercase",
-    color: "purple",
+    color: "#66003b",
   },
   icon: {
     width: "30px",
-    color: "purple",
+    color: "#66003b",
   },
   color: {
     background: "white",
@@ -86,7 +86,7 @@ export const Navbartop = () => {
       <Toolbar>
         <Container maxWidth="xl" className={classes.navDisplayFlex}>
           <IconButton edge="start" color="inherit" aria-label="home" href="/">
-            <Home fontSize="large" style={{ color: "purple" }} />
+            <Home fontSize="large" style={{ color: "#66003b" }} />
           </IconButton>
           <Hidden smDown>
             <List

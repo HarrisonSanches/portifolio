@@ -25,15 +25,55 @@ export default function App() {
             style={{
               display: "flex",
               justifyContent: "space-around",
+              backgroundColor: "#66003b",
             }}
           >
-            <div>
-              <h1>HARRISON SANCHES</h1>
-            </div>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <h1>HARRISON</h1>
+            </Box>
+            <Box
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <h1>SANCHES</h1>
+            </Box>
           </div>
-          <div style={{ backgroundColor: "white" }}>
+          <Box
+            style={{ backgroundColor: "white" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 10 }}
+          >
             <h4>Software engineer fullstack</h4>
-          </div>
+          </Box>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              height: "20vh",
+              alignContent: "center",
+              alignItems: "center",
+              backgroundColor: "white",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button className=" button-home button-home-color button-xl">
+              Saiba mais!
+            </button>
+          </Box>
         </Teste>
       </SideBarBody>
       {/* <AnimateSharedLayout>
@@ -81,7 +121,6 @@ const SideBarBody = styled.div`
   width: 100%;
   height: 50vh;
   margin-top: 10%;
-  // background: red;
 `;
 
 const TittleStart = styled.div`
@@ -93,7 +132,6 @@ const TittleStart = styled.div`
 
 const Teste = styled.div`
   display: grid;
-  background: purple;
   color: black;
   width: 100%;
 `;

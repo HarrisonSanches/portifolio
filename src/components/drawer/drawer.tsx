@@ -129,7 +129,7 @@ export default function SideDrawer() {
       {(["right"] as Anchor[]).map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
-            <Menu fontSize="large" style={{ color: `purple` }} />
+            <Menu fontSize="large" style={{ color: `#66003b` }} />
           </Button>
 
           <SwipeableDrawer

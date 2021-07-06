@@ -14,7 +14,7 @@
 button-home{
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -29,15 +29,15 @@ button-home{
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-  .button-home {
-    color: rgb(0, 0, 0);
-    background-color: #aafa42;
+  .button-home-color {
+    color: rgb(255, 255, 255);
+    background-color: #66003b;
     border-color: #000000;
   }
   .button-home:hover {
     color: #fff;
-    background-color: #3a3838;
-    border-color: #aafa42;
+    background-color: #74023b;
+    border-color: #000000;
   }
   .button-xl {
     padding: 1.25rem 2.5rem;
