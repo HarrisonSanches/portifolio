@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import { Navbartop } from "../../components/navbartop/navbartest";
 import { Link } from "react-router-dom";
 
-const AppContainer = styled.div``;
-
 const Box = styled(motion.div)``;
 
 export default function Home() {

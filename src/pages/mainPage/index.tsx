@@ -46,7 +46,7 @@ export default function MainPage() {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "center",
             alignItems: "center",
             justifyItems: "center",
             alignContent: "center",
@@ -60,7 +60,8 @@ export default function MainPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.3 }}
           >
             <IconButton style={{ color: "white" }} href="/">
               <SentimentVerySatisfiedOutlinedIcon style={{ fontSize: 80 }} />
@@ -72,19 +73,21 @@ export default function MainPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 3 }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.3 }}
           >
             <IconButton style={{ color: "white" }} href="/">
               <SchoolOutlinedIcon style={{ fontSize: 80 }} />
             </IconButton>
-            <h2>Graduações</h2>
+            <h2>Graduação</h2>
           </Box>
           <Box
             style={{}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.3 }}
           >
             <IconButton style={{ color: "white" }} href="/">
               <CodeOutlinedIcon style={{ fontSize: 80 }} />
