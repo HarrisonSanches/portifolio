@@ -52,7 +52,6 @@ export default function MainPage() {
             alignContent: "center",
             height: "100%",
             width: "100vw",
-            backgroundColor: "#74023b",
           }}
         >
           <Box

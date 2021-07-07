@@ -1,4 +1,5 @@
 import { BrowserRouter, Route } from "react-router-dom";
+import Graduation from "./pages/graduation";
 import Home from "./pages/home";
 import MainPage from "./pages/mainPage";
 
@@ -9,8 +10,10 @@ const Rotas = () => {
   return (
     <BrowserRouter>
       {/* adicionar as rotas futuramente. exemplo abaixo*/}
-      <Route component={Home} path="/" exact />
+      <Route component={Graduation} path="/graduation" exact />
+
       <Route component={MainPage} path="/main" exact />
+      <Route component={Home} path="/" exact />
     </BrowserRouter>
   );
 };
