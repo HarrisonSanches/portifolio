@@ -1,24 +1,9 @@
-import React from "react";
 import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "./style.css";
 import { Navbartop } from "../../components/navbartop/navbartest";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-
-/**
- * This is an example of animating shared layouts in Framer Motion 2.
- *
- * The open state of each panel is contained locally to that component. Wrapping
- * them all in the same AnimateSharedLayout component allows them all to animate
- * in response to state changes that affect each other's layout.
- *
- * Try removing AnimateSharedLayout to see how that affects the animation.
- */
 
 export default function Graduation() {
-  const Box = styled(motion.div)``;
-
   return (
     <>
       <Navbartop />
@@ -33,10 +18,23 @@ export default function Graduation() {
         }}
       >
         <AnimateSharedLayout>
-          <motion.ul layout initial={{ borderRadius: 25 }}>
-            {items.map((item) => (
-              <Item key={item} />
-            ))}
+          <motion.ul
+            layout
+            initial={{ borderRadius: 25 }}
+            style={{
+              width: "400px",
+              display: "flex",
+              flexDirection: "column",
+              backgroundColor: "#66003b",
+              padding: "20px",
+              borderRadius: "25px",
+            }}
+          >
+            {items.map(
+              (item) =>
+                item === 1 ? <Item key={item} /> : <Item2 key={item} />
+              // <Item key={item} />
+            )}
           </motion.ul>
         </AnimateSharedLayout>
       </div>
@@ -44,14 +42,30 @@ export default function Graduation() {
   );
 }
 
+const items = [0, 1];
+
 function Item() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <motion.li layout onClick={toggleOpen} initial={{ borderRadius: 10 }}>
-      <motion.div className="avatar" layout />
+    <motion.li
+      layout
+      onClick={toggleOpen}
+      initial={{ borderRadius: 10 }}
+      style={{
+        backgroundColor: "rgba(214, 214, 214, 0.5)",
+        borderRadius: "10px",
+        padding: "20px",
+        marginBottom: "20px",
+        overflow: "hidden",
+        cursor: "pointer",
+      }}
+    >
+      <motion.div layout>
+        <h1>Técnico em Portos</h1>
+      </motion.div>
       <AnimatePresence>{isOpen && <Content />}</AnimatePresence>
     </motion.li>
   );
@@ -65,36 +79,50 @@ function Content() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h1>TESTE</h1>
-      <h1>TESTE</h1>
-      <h1>TESTE</h1>
-      <h2>blá blá blá blá blá blá blá blá blá</h2>
+      <h3>Instituição: IFES</h3>
+      <h3>Conclusão: 2018</h3>
     </motion.div>
   );
 }
 
-const items = [0, 1, 2];
+function Item2() {
+  const [isOpen, setIsOpen2] = useState(false);
 
-const SideBarBody = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  height: 50vh;
-  margin-top: 10%;
-`;
+  const toggleOpen2 = () => setIsOpen2(!isOpen);
 
-const TittleStart = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 5px;
-`;
+  return (
+    <motion.li
+      layout
+      onClick={toggleOpen2}
+      initial={{ borderRadius: 10 }}
+      style={{
+        backgroundColor: "rgba(214, 214, 214, 0.5)",
+        borderRadius: "10px",
+        padding: "20px",
+        marginBottom: "20px",
+        overflow: "hidden",
+        cursor: "pointer",
+      }}
+    >
+      <motion.div layout>
+        <h1>Bacharelado em Sistemas de Informação</h1>
+      </motion.div>
+      <AnimatePresence>{isOpen && <Content2 />}</AnimatePresence>
+    </motion.li>
+  );
+}
 
-const Teste = styled.div`
-  display: grid;
-  color: black;
-  width: 100%;
-`;
+function Content2() {
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      // style={{ display: "flex", justifyContent: "flex-start" }}
+    >
+      <h3>Instituição: IFES</h3>
+      <h3>Período: 7º</h3>
+    </motion.div>
+  );
+}

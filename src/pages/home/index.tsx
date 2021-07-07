@@ -1,20 +1,13 @@
 import "./style.css";
 
 import styled from "styled-components";
-import { motion, AnimateSharedLayout } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Navbartop } from "../../components/navbartop/navbartest";
 import { Link } from "react-router-dom";
 
 const Box = styled(motion.div)``;
 
 export default function Home() {
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
-
   return (
     <>
       <Navbartop />
@@ -74,9 +67,6 @@ export default function Home() {
           </Box>
         </Teste>
       </SideBarBody>
-      {/* <AnimateSharedLayout>
-          {animate ? <AlignedState /> : <InitialState />}
-        </AnimateSharedLayout> */}
     </>
   );
 }
@@ -90,13 +80,6 @@ const SideBarBody = styled.div`
   width: 100%;
   height: 80vh;
   margin-top: 10%;
-`;
-
-const TittleStart = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 5px;
 `;
 
 const Teste = styled.div`

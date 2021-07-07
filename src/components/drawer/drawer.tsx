@@ -1,9 +1,6 @@
-import { IconButton } from "@material-ui/core";
 import { Menu } from "@material-ui/icons";
-import React, { Fragment } from "react";
-import { useState } from "react";
+import React from "react";
 // import React from "react";
-import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
@@ -18,13 +15,6 @@ import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
 } from "react-router-dom";
-import {
-  FiHome,
-  FiCoffee,
-  FiCodesandbox,
-  FiActivity,
-  FiSmartphone,
-} from "react-icons/fi";
 
 const useStyles = makeStyles({
   list: {
@@ -45,14 +35,6 @@ const useStyles = makeStyles({
     paddingBottom: 10,
   },
 });
-
-const navLinks = [
-  { title: "Sobre", path: "/#" },
-  { title: "Serviços", path: "/#" },
-  { title: "Equipe", path: "/#" },
-  { title: "Contato", path: "/#" },
-  { title: "login", path: "/#" },
-];
 
 interface ListItemLinkProps {
   icon?: React.ReactElement;
@@ -81,19 +63,12 @@ function ListItemLink(props: ListItemLinkProps) {
   );
 }
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-};
-
 export default function SideDrawer() {
   const classes = useStyles();
   type Anchor = "right";
   const [state, setState] = React.useState({
     right: false,
   });
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>

@@ -14,8 +14,6 @@ import {
 } from "react-router-dom";
 import { Omit } from "@material-ui/types";
 import SmartphoneIcon from "@material-ui/icons/Smartphone";
-import WorkIcon from "@material-ui/icons/Work";
-import FreeBreakfast from "@material-ui/icons/FreeBreakfast";
 import Linkedin from "@material-ui/icons/LinkedIn";
 import Github from "@material-ui/icons/GitHub";
 
@@ -73,13 +71,6 @@ function ListItemLink(props: ListItemLinkProps) {
 }
 
 export const Navbartop = () => {
-  // const navLinks = [
-  //   { title: "Sobre", path: "/#" },
-  //   { title: "Serviços", path: "/#" },
-  //   { title: "Equipe", path: "/#" },
-  //   { title: "Contato", path: "/#" },
-  // ];
-
   const classes = useStyles();
   return (
     <AppBar position="static" className={classes.color}>
