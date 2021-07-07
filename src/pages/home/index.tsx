@@ -4,12 +4,13 @@ import styled from "styled-components";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Navbartop } from "../../components/navbartop/navbartest";
+import { Link } from "react-router-dom";
 
 const AppContainer = styled.div``;
 
-const Box = styled(motion.div).attrs(() => ({ transition: { duration: 1 } }))``;
+const Box = styled(motion.div)``;
 
-export default function App() {
+export default function Home() {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -36,15 +37,9 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 2 }}
             >
-              <h1>HARRISON</h1>
-            </Box>
-            <Box
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <h1>SANCHES</h1>
+              <h1 style={{ color: "white" }}>Harrison Sanches</h1>
             </Box>
           </div>
           <Box
@@ -52,7 +47,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 10 }}
+            transition={{ duration: 3 }}
           >
             <h4>Software engineer fullstack</h4>
           </Box>
@@ -69,10 +64,15 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 5 }}
           >
-            <button className=" button-home button-home-color button-xl">
-              Saiba mais!
-            </button>
+            <Link
+              to="/main"
+              className=" button-home button-home-color button-xl"
+              style={{ textDecoration: "none" }}
+            >
+              Saiba mais
+            </Link>
           </Box>
         </Teste>
       </SideBarBody>
@@ -83,35 +83,6 @@ export default function App() {
   );
 }
 
-const AlignedState = () => (
-  <>
-    <Box layoutId="1" style={{ backgroundColor: "gray" }}>
-      <h1>HARRISON</h1>
-    </Box>
-    <Box layoutId="3" style={{ backgroundColor: "blue" }}>
-      <h1>SANCHES</h1>
-    </Box>
-  </>
-);
-
-const InitialState = () => (
-  <>
-    <Box
-      layoutId="1"
-      style={{
-        position: "absolute",
-        top: "37.5vh",
-        left: 0,
-      }}
-    />
-    <Box
-      layoutId="3"
-      style={{ position: "absolute", right: 0, top: "37.5vh" }}
-    />
-    <Box layoutId="4" style={{ position: "absolute", bottom: 0 }} />
-  </>
-);
-
 const SideBarBody = styled.div`
   align-items: center;
   display: flex;
@@ -119,7 +90,7 @@ const SideBarBody = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 50vh;
+  height: 80vh;
   margin-top: 10%;
 `;
 

@@ -97,17 +97,17 @@ export const Navbartop = () => {
               <ListItemLink
                 to="/#"
                 primary="Linkedin"
-                icon={<Linkedin style={{ color: "purple" }} />}
+                icon={<Linkedin style={{ color: "#66003b" }} />}
               />
               <ListItemLink
                 to="/#"
                 primary="GitHub"
-                icon={<Github style={{ color: "purple" }} />}
+                icon={<Github style={{ color: "#66003b" }} />}
               />
               <ListItemLink
                 to="/#"
                 primary="Contato"
-                icon={<SmartphoneIcon style={{ color: "purple" }} />}
+                icon={<SmartphoneIcon style={{ color: "#66003b" }} />}
               />
             </List>
           </Hidden>

@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swa');
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+/* fontsubtittlehome */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 /* block-home {
   display: flex;
@@ -40,7 +42,7 @@ button-home{
     border-color: #000000;
   }
   .button-xl {
-    padding: 1.25rem 2.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .container {
@@ -98,6 +100,7 @@ button-home{
 
 
 
-h1{
-  font-family: 'Jost', sans-serif;
-  }
+h4{
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
