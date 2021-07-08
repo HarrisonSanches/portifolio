@@ -9,10 +9,16 @@ const Box = styled(motion.div)``;
 
 export default function Home() {
   return (
-    <>
-      <Navbartop />
+    <motion.div
+      initial={{ opacity: 0, translateX: "-100%" }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 2 }}
+      exit={{ translateX: "50%", transition: { duration: 0.2 } }}
+    >
+      {/* <Navbartop /> */}
       <SideBarBody>
         <Teste>
+          {/* animar a barrinha de fundo */}
           <div
             style={{
               display: "flex",
@@ -27,7 +33,6 @@ export default function Home() {
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
               transition={{ duration: 2 }}
             >
               <h1 style={{ color: "white" }}>Harrison Sanches</h1>
@@ -37,7 +42,6 @@ export default function Home() {
             style={{ backgroundColor: "white" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 3 }}
           >
             <h4>Software engineer fullstack</h4>
@@ -54,7 +58,6 @@ export default function Home() {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 5 }}
           >
             <Link
@@ -67,7 +70,7 @@ export default function Home() {
           </Box>
         </Teste>
       </SideBarBody>
-    </>
+    </motion.div>
   );
 }
 

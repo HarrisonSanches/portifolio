@@ -9,76 +9,74 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 export default function MainPage() {
-  useEffect(() => {
-    AOS.init({ duration: 3000 });
-    AOS.refresh();
-  }, []);
   return (
-    <>
-      <Navbartop />
+    <motion.div
+      initial={{ opacity: 0, translateX: -300 }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 1 }}
+      exit={{ translateX: "50%", transition: { duration: 0.2 } }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        justifyItems: "center",
+        height: "93.4vh",
+        backgroundColor: "#74023b",
+      }}
+    >
+      {/* <Navbartop /> */}
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           justifyItems: "center",
-          height: "93.4vh",
-          backgroundColor: "#74023b",
+          alignContent: "center",
+          height: "100%",
+          width: "100vw",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            justifyItems: "center",
-            alignContent: "center",
-            height: "100%",
-            width: "100vw",
-          }}
+        <Box
+          style={{}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.3 }}
         >
-          <Box
-            style={{}}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            whileHover={{ scale: 1.3 }}
-          >
-            <IconButton style={{ color: "white" }} href="/">
-              <SentimentVerySatisfiedOutlinedIcon style={{ fontSize: 80 }} />
-            </IconButton>
-            <h2 data-aos="fade-down">Me</h2>
-          </Box>
-          <Box
-            style={{}}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            whileHover={{ scale: 1.3 }}
-          >
-            <IconButton style={{ color: "white" }} href="/graduation">
-              <SchoolOutlinedIcon style={{ fontSize: 80 }} />
-            </IconButton>
-            <h2>Graduação</h2>
-          </Box>
-          <Box
-            style={{}}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            whileHover={{ scale: 1.3 }}
-          >
-            <IconButton style={{ color: "white" }} href="/">
-              <CodeOutlinedIcon style={{ fontSize: 80 }} />
-            </IconButton>
-            <h2>Projetos</h2>
-          </Box>
-        </div>
+          <IconButton style={{ color: "white" }} href="/">
+            <SentimentVerySatisfiedOutlinedIcon style={{ fontSize: 80 }} />
+          </IconButton>
+          <h2 data-aos="fade-down">Me</h2>
+        </Box>
+        <Box
+          style={{}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.3 }}
+        >
+          <IconButton style={{ color: "white" }} href="/graduation">
+            <SchoolOutlinedIcon style={{ fontSize: 80 }} />
+          </IconButton>
+          <h2>Graduação</h2>
+        </Box>
+        <Box
+          style={{}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.3 }}
+        >
+          <IconButton style={{ color: "white" }} href="/">
+            <CodeOutlinedIcon style={{ fontSize: 80 }} />
+          </IconButton>
+          <h2>Projetos</h2>
+        </Box>
       </div>
-    </>
+    </motion.div>
   );
 }
 

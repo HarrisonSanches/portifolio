@@ -11,6 +11,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
+  useHistory,
 } from "react-router-dom";
 import { Omit } from "@material-ui/types";
 import SmartphoneIcon from "@material-ui/icons/Smartphone";
@@ -71,12 +72,18 @@ function ListItemLink(props: ListItemLinkProps) {
 }
 
 export const Navbartop = () => {
+  const history = useHistory();
   const classes = useStyles();
   return (
     <AppBar position="static" className={classes.color}>
       <Toolbar>
         <Container maxWidth="xl" className={classes.navDisplayFlex}>
-          <IconButton edge="start" color="inherit" aria-label="home" href="/">
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="home"
+            onClick={() => history.push("/")}
+          >
             <Home fontSize="large" style={{ color: "#66003b" }} />
           </IconButton>
           <Hidden smDown>
