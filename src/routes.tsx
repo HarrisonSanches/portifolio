@@ -5,6 +5,7 @@ import MainPage from "./pages/mainPage";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbartop } from "./components/navbartop/navbartest";
+import AboutMe from "./pages/aboutMe";
 
 // DEFININDO AS ROTAS
 // Também tenho as funções para chamar as páginas
@@ -18,6 +19,7 @@ const Rotas = () => {
             <Navbartop />
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
+                <Route component={AboutMe} path="/aboutme" exact />
                 <Route component={Graduation} path="/graduation" exact />
                 <Route component={MainPage} path="/main" exact />
                 <Route component={Home} path="/" exact />

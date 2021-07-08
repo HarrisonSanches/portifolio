@@ -1,12 +1,9 @@
-import { Navbartop } from "../../components/navbartop/navbartest";
 import { IconButton } from "@material-ui/core";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import SentimentVerySatisfiedOutlinedIcon from "@material-ui/icons/SentimentVerySatisfiedOutlined";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
 import CodeOutlinedIcon from "@material-ui/icons/CodeOutlined";
-import AOS from "aos";
-import { useEffect } from "react";
 
 export default function MainPage() {
   return (

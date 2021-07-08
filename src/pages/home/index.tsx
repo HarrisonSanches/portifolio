@@ -1,8 +1,6 @@
 import "./style.css";
-
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Navbartop } from "../../components/navbartop/navbartest";
 import { Link } from "react-router-dom";
 
 const Box = styled(motion.div)``;

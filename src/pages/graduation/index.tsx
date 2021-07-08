@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "./style.css";
-import { Navbartop } from "../../components/navbartop/navbartest";
 
 export default function Graduation() {
   return (
