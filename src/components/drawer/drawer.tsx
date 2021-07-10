@@ -70,6 +70,7 @@ export default function SideDrawer() {
     right: false,
   });
 
+  // TODO ADD DRAG EVENT (REACT.DRAGEVENT)
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {

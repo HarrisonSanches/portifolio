@@ -45,15 +45,7 @@ export default function Home() {
             <h4>Software engineer fullstack</h4>
           </Box>
           <Box
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-              height: "20vh",
-              alignContent: "center",
-              alignItems: "center",
-              backgroundColor: "white",
-            }}
+            style={estilo.box}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 5 }}
@@ -61,7 +53,7 @@ export default function Home() {
             <Link
               to="/main"
               className=" button-home button-home-color button-xl"
-              style={{ textDecoration: "none" }}
+              style={estilo.link}
             >
               Saiba mais
             </Link>
@@ -71,6 +63,20 @@ export default function Home() {
     </motion.div>
   );
 }
+
+// estilização (generalizar)
+const estilo = {
+  link: { textDecoration: "none" },
+  box: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+    height: "20vh",
+    alignContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+  },
+};
 
 const SideBarBody = styled.div`
   align-items: center;
